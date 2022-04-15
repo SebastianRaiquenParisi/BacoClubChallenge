@@ -1,0 +1,21 @@
+<html ng-app="myFirstApp" >
+    <head>
+        <link rel="shortcut icon" href="#">
+        <meta charset='utf-8'>
+        <script type="text/javascript" src="https://code.angularjs.org/1.8.2/angular.js"></script>
+        <script type="text/javascript" src="https://code.angularjs.org/1.8.2/angular-route.js"></script>
+        
+        <script src="app.js"></script>
+    </head>
+    <body ng-controller="myFirstController">
+        <input type="text" ng-model="nuevoComentario.comentario">
+        <br>
+        <input type="text ng-model" ng-model="nuevoComentario.username">
+        <h3>Comentarios</h3>
+        <ul>
+            <li ng-repeat="comentario in comentarios">
+                {{comentario.comentario}} <strong>{{comentario.username}}</strong>
+            </li>
+        </ul>
+    </body>
+</html>
