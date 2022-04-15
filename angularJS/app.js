@@ -15,6 +15,7 @@
         ]
         $scope.agregarComentario = function(){
             $scope.comentarios.push($scope.nuevoComentario);
+            $scope.nuevoComentario = {};
         }
     });
 
