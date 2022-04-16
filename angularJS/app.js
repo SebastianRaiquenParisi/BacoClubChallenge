@@ -1,22 +1,13 @@
 (function(){
     'use strict'
-    angular.module('myFirstApp', [])
-    .controller("myFirstController", function($scope){
-        $scope.nuevoComentario = {};
-        $scope.comentarios=[
-            {
-                comentario:"Buen tutorial",
-                username:"codigofacilito"
-            },
-            {
-                comentario:"Malo el tutorial",
-                username:"otro_usuario"
-            }
-        ]
-        $scope.agregarComentario = function(){
-            $scope.comentarios.push($scope.nuevoComentario);
-            $scope.nuevoComentario = {};
+    angular.module('Dionisio', [])
+    .controller("HomeController", HomeController);
+    function HomeController($scope, $filter){
+        $scope.name="Seba"
+        $scope.upper = function (){
+            let upCase = $filter('uppercase');
+            $scope.name = upCase($scope.name);
+            $scope.apply();
         }
-    });
-
+    }
 })();
